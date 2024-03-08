@@ -1,0 +1,17 @@
+#pragma once
+#include "stdafx.h"
+class Board
+{
+public:
+	Board();
+	~Board();
+
+	static void Init();
+	static void Render();
+
+	static int board[Board_X][Board_Y];
+private:
+};
+
+
+
