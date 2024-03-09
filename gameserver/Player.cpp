@@ -19,19 +19,19 @@ void Player::Update()
 		switch (Input::command[0])
 		{
 		case UP:
-			if (pos.y > 1)
+			if (pos.y > 0)
 				pos.y--;
 			break;
 		case DOWN:
-			if (pos.y < Board_Y - 2)
+			if (pos.y < Board_Y)
 				pos.y++;
 			break;
 		case LEFT:
-			if (pos.x > 1)
+			if (pos.x > 0)
 				pos.x--;
 			break;
 		case RIGHT:
-			if (pos.x < Board_X - 2)
+			if (pos.x < Board_X)
 				pos.x++;
 			break;
 		default:

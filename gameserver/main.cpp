@@ -14,14 +14,12 @@ int main() {
 	while (true) {
 		input.Update();
 		game.Update();
-		//Board::Render();
-		//Sleep(100);
-		//system("cls");
 		if (Input::input) {
-			system("cls");
+			gotoxy(0, 0);
 			Board::Render();
 		}
 		if (Input::command[0] == ESCAPE) break;
 	}
 	return 0;
 }
+

@@ -13,5 +13,6 @@ public:
 private:
 };
 
+void gotoxy(int, int);
 
 
