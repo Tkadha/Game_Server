@@ -1,5 +1,8 @@
+#include "stdafx.h"
+#include <Windows.h>
 #include "Board.h"
 #include "Input.h"
+
 int Board::board[Board_X][Board_Y];
 
 Board::Board()
@@ -43,6 +46,6 @@ void Board::Render()
 
 void gotoxy(int x, int y)
 {
-	COORD pos = { x,y };
+	COORD pos = { static_cast<short>(x), static_cast<short>(y) };
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }

@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <conio.h>
-#include <Windows.h>
 
 const int Board_X = 8;
 const int Board_Y = 8;
@@ -19,7 +18,20 @@ enum E_BOARD_TYPE {
 	E_PLAYER
 };
 
+enum E_PACKET_TYPE {
+	E_UPLOAD,
+	E_MOVE
+};
+
 struct Pos {
 	int x;
 	int y;
+
+	Pos& operator=(const Pos& other) {
+		if (this != &other) {
+			x = other.x;
+			y = other.y;
+		}
+		return *this;
+	 }
 };

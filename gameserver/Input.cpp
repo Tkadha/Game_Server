@@ -1,7 +1,8 @@
+#include "stdafx.h"
 #include "Input.h"
 int Input::input = 0;
 char Input::command[] = {};
-int Input::key = 0;
+char Input::type{ E_PACKET_TYPE::E_UPLOAD };
 Input::Input()
 {
 
@@ -14,7 +15,6 @@ Input::~Input()
 
 void Input::Init()
 {
-	key = 0;
 	input = 0;
 }
 
@@ -24,9 +24,10 @@ void Input::Update()
 	if (input) {
 		command[0] = _getch();
 		if (command[0] == -32) {
+			type = E_PACKET_TYPE::E_MOVE;
 			command[0] = _getch();
-			key = command[0];
 		}
+		
 	}
 }
 

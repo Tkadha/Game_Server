@@ -1,5 +1,4 @@
 #pragma once
-#include "stdafx.h"
 
 class Input
 {
@@ -13,8 +12,7 @@ public:
 
 	static int input;
 	static char command[1];
-	static int key;
-
+	static char type;
 private:
 };
 
